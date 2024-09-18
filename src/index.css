@@ -1,0 +1,282 @@
+* {
+  box-sizing: border-box;
+}
+
+.navbar-bg {
+  background-color: rgb(43,48,53);
+  height: 7vh;
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin: 0 10px;
+  width: 100%;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+  color: rgb(234, 234, 234);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  transition: color 0.3s ease, border-bottom 0.2s ease; /* Aggiunge una transizione fluida */
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navbar .hire {
+  margin: 0 15px 0 auto;
+  font-weight: bold;
+
+}
+
+.navbar .nav-link:hover,
+.navbar .hire:hover {
+  color: white; /* Cambia colore del testo all'hover */
+  border-bottom: 5px solid blueviolet; /* Applica il bordo sotto */
+}
+
+.navbar .navbar-brand:hover {
+  color: white; /* Assicurati che il brand rimanga bianco all'hover */
+}
+/* Rimuovi il bordo di focus e mantieni il colore dei link invariato */
+.navbar .nav-link:focus,
+.navbar .nav-link:active,
+.navbar .hire:focus,
+.navbar .hire:active,
+.navbar .navbar-brand:focus,
+.navbar .navbar-brand:active {
+  color: rgb(234, 234, 234); /* Mantiene il colore invariato */
+  outline: none; /* Rimuove l'outline predefinito */
+  border-bottom: none; /* Rimuove eventuali bordi applicati */
+}
+
+.heading-primary{
+
+  color: white;
+  font-size: 6rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  font-weight: 800;
+
+}
+.text {
+  margin-top: 50px;
+  color: white;
+  font-size: 2.2rem;
+  text-align: center;
+  width: 100%;
+  line-height: 1.6;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%; 
+}
+
+.btn-projects {
+  margin-top: 70px;
+  height: 10vh;
+  width: 20vw;
+  background: #7843E9;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  font-weight: 700;
+  font-size: 50px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform .3s;
+  border: none;
+}
+.bg-img{
+  background-image: url('./assets/images/Bg.png'); /* Percorso relativo */
+  background-size: cover; /* Rende l'immagine di sfondo coprire tutta la pagina */
+  background-position: center; /* Allinea l'immagine al centro */
+  background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
+  background-attachment: fixed; /* Rende l'immagine fissa mentre si scrolla */
+  height: 80vh;
+  padding-top: 100px;
+}
+#code-img{
+  margin: 50px 0 20px 0;
+}
+.container-projects{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  width: 100%; 
+}
+
+.heading{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heading h1{
+  font-size: 80px;
+}
+.heading p{
+  font-size: 25px;
+}
+#hr{
+  margin: 15px 0 25px 0;
+  width: 5%;
+  height: 15px;
+  border-radius: 8px;
+  background-color: blueviolet;
+  border: none;
+}
+.display-img{
+
+}
+.content-list{
+  display: flex;
+  flex-direction: column;
+  margin: 80px 0 0 0;
+}
+.content-items{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+}
+.project-details{
+  padding: 115px 0 0 50px;
+  color: white;
+  font-size: 20px;
+}
+.project-details p{
+  margin-top: 25px;
+  width: 30vw;
+}
+.goToProjects{
+  margin-top: 20px;
+  color: white;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 8px;
+  width: 15vw;
+  height: 5vh;
+}
+#project-section{
+  padding-top: 50px;
+  background-color: #252525;
+  margin: 0;
+}
+#About-section{
+  padding: 100px 0 200px 0;
+  background-color: #2e2d2d;
+  margin: 0;
+  
+}
+.about-content{
+  display: flex;
+  color: white;
+  margin: 70px 250px 0 250px;
+  gap: 100px;
+  display: flex;
+  justify-content: center;
+}
+.know-me-section{
+  width: 50%;
+}
+.know-me-section p {
+  font-size: x-large;
+}
+.know-me-section h2{
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.content-button{
+  margin-top: 5px;
+  color: white;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 8px;
+  width: 10vw;
+  height: 5vh;
+  font-size: large;
+  font-weight: bold;
+}
+.skills{
+  display: flex;
+  gap: 5px;
+}
+.skill{
+  background-color: #444444;
+  border-radius: 8px;
+  padding: 10px;
+  font-weight: bold;
+}
+.contact-section {
+  background-image: url(./assets/images/Bg.png);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: center;
+  padding: 50px 0 50px 0;
+  margin: 0;
+}
+
+.form-section {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+.form-group textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: blueviolet;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: rgb(55, 17, 91);
+}
+#contact-section{
+padding: 200px 0 200px 0;
+background-image: url(./assets/images/Bg.png);
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+}
