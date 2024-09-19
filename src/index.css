@@ -1,11 +1,15 @@
-* {
-  box-sizing: border-box;
+
+
+.navbar {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgb(43, 48, 53);
+  height: 7vh;
+  z-index: 1000;
 }
 
-.navbar-bg {
-  background-color: rgb(43,48,53);
-  height: 7vh;
-}
 
 .navbar-container {
   display: flex;
@@ -22,7 +26,7 @@
   display: flex;
   align-items: center;
   height: 100%;
-  transition: color 0.3s ease, border-bottom 0.2s ease; /* Aggiunge una transizione fluida */
+  transition: color 0.3s ease, border-bottom 0.2s ease; 
 }
 
 .navbar .navbar-brand {
@@ -38,33 +42,135 @@
 
 .navbar .nav-link:hover,
 .navbar .hire:hover {
-  color: white; /* Cambia colore del testo all'hover */
-  border-bottom: 5px solid blueviolet; /* Applica il bordo sotto */
+  color: white;
+  border-bottom: 5px solid #8a2be2;
+  cursor: pointer;
+}
+.navbar-brand:hover{
+  cursor: pointer;
 }
 
 .navbar .navbar-brand:hover {
-  color: white; /* Assicurati che il brand rimanga bianco all'hover */
+  color: white; 
 }
-/* Rimuovi il bordo di focus e mantieni il colore dei link invariato */
+
 .navbar .nav-link:focus,
 .navbar .nav-link:active,
 .navbar .hire:focus,
 .navbar .hire:active,
 .navbar .navbar-brand:focus,
 .navbar .navbar-brand:active {
-  color: rgb(234, 234, 234); /* Mantiene il colore invariato */
-  outline: none; /* Rimuove l'outline predefinito */
-  border-bottom: none; /* Rimuove eventuali bordi applicati */
+  color: rgb(234, 234, 234); 
+  outline: none;
+  border-bottom: none;
+}
+/* Base styles for the navbar */
+.navbar-ham {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #1f2937; /* bg-gray-800 */
+  color: white;
+  height: 10vh;
+  z-index: 1000;
+  padding: 0 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  height: 100%;
+}
+
+/* Navbar content layout */
+.navbar-ham > .container > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+/* Brand styles */
+.navbar-brand-ham {
+  color: rgb(234, 234, 234);
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/* Menu button styles */
+.btn-ham {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: #374151; /* bg-gray-700 */
+}
+
+.btn-ham:hover {
+  background-color: #4b5563; /* hover:bg-gray-600 */
+}
+
+/* Dropdown menu styles */
+.menu-sections {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  color: #1f2937; /* text-gray-800 */
+}
+
+.menu-sections a {
+  display: block;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e5e7eb;
+  color: #1f2937;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: right;
+}
+
+.menu-sections a:last-child {
+  border-bottom: none;
+}
+
+.menu-sections a:hover {
+  background-color: #f3f4f6; /* hover:bg-gray-100 */
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  .navbar-ham {
+    padding: 0 50px;
+  }
+}
+/*Home Section*/
+#home-section{
+  height: 100vh;
+  background-image: url('./assets/images/Bg.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
 }
 
 .heading-primary{
 
   color: white;
-  font-size: 6rem;
+  font-size: 3rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-align: center;
   font-weight: 800;
+
 
 }
 .text {
@@ -72,9 +178,10 @@
   color: white;
   font-size: 2.2rem;
   text-align: center;
-  width: 100%;
+  width: 50%;
   line-height: 1.6;
 }
+
 .btn {
   display: flex;
   justify-content: center;
@@ -85,7 +192,7 @@
 .btn-projects {
   margin-top: 70px;
   height: 10vh;
-  width: 20vw;
+  width: 15vw;
   background: #7843E9;
   color: #fff;
   text-transform: uppercase;
@@ -98,15 +205,7 @@
   transition: transform .3s;
   border: none;
 }
-.bg-img{
-  background-image: url('./assets/images/Bg.png'); /* Percorso relativo */
-  background-size: cover; /* Rende l'immagine di sfondo coprire tutta la pagina */
-  background-position: center; /* Allinea l'immagine al centro */
-  background-repeat: no-repeat; /* Evita la ripetizione dell'immagine */
-  background-attachment: fixed; /* Rende l'immagine fissa mentre si scrolla */
-  height: 80vh;
-  padding-top: 100px;
-}
+
 #code-img{
   margin: 50px 0 20px 0;
 }
@@ -134,12 +233,10 @@
   width: 5%;
   height: 15px;
   border-radius: 8px;
-  background-color: blueviolet;
+  background-color: #8a2be2;
   border: none;
 }
-.display-img{
 
-}
 .content-list{
   display: flex;
   flex-direction: column;
@@ -174,13 +271,16 @@
   margin: 0;
 }
 #About-section{
-  padding: 100px 0 200px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #2e2d2d;
   margin: 0;
-  
+  height: 100vh;
 }
 .about-content{
   display: flex;
+  flex-direction: column;
   color: white;
   margin: 70px 250px 0 250px;
   gap: 100px;
@@ -230,7 +330,7 @@
 
 .form-section {
   width: 100%;
-  max-width: 500px;
+  max-width: 700px;
   padding: 20px;
   background-color: rgb(37, 37, 37);
   border-radius: 10px;
@@ -272,11 +372,279 @@
   background-color: rgb(55, 17, 91);
 }
 #contact-section{
-padding: 200px 0 200px 0;
-background-image: url(./assets/images/Bg.png);
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-color: white;
+
+    background-image: url(./assets/images/Bg.png);
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+/* Mobile Large */
+@media screen and (max-width: 600px) {
+  #home-section {
+    height: 100vh;
+  }
+  
+  .heading-primary {
+    font-size: 2rem;
+  }
+  
+  .text {
+    font-size: 1.5rem;
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .btn-projects{
+    font-size: 20px;
+    width: 30vw;
+  }
+
+  #About-section{
+    height: 130vh;
+    padding-top: 50px;
+    justify-content: flex-start;
+  }
+
+  .heading{
+    margin-bottom: 10px;
+  }
+  .heading h1{
+    padding-top: 40px;
+    font-size: 40px;
+  }
+
+  .heading p{
+    font-size: 15px;
+  }
+  .know-me-section{
+    width: 80%;
+
+  }
+  .know-me-section p {
+    font-size: large;
+    
+  }
+  
+  .know-me-section h2{
+    font-size: larger;
+  }
+
+  #hr{
+    width: 15%;
+
+  }
+  
+  .about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    gap: 30px;
+    padding: 0 ;
+    
+  }
+
+  .content-button{
+    width: 30vw;
+    height: 5vh;
+    font-size: medium;
+    display: block;
+    margin: 20px auto 50px auto;
+  }
+
+  .skill-section h2{
+    margin-right: 100px;
+  }
+
+  #code-img{
+    width: 50%;
+    height: 50%;
+  }
+
+  .display-img{
+    width: 90%;
+    height: 90%;
+  }
+  .content-list{
+    padding-left: 0;
+  }
+  .content-items{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-details{
+    padding: 0;
+    text-align: center;
+  }
+
+  .project-details p{
+    width: 100vw;
+    padding: 0 15px 0 15px;
+  }
+  .goToProjects{
+    width: 30vw;
+  }
+  #project-section{
+    padding: 50px 0 25px 0;
+
+  }
+  #contact-section{
+    height: 90vh;
+  }
+}
+/* Mobile Large */
+@media screen and (max-width: 1100px) and (min-width: 601px) {
+  .navbar{
+    height: 8vh;
+  }
+  .navbar .navbar-brand {
+    font-size: 30px;
+  }
+  .navbar .nav-link{
+    font-size: 28px;
+  }
+  #home-section {
+    height: 100vh;
+  }
+  
+  .heading-primary {
+    font-size: 3rem;
+  }
+  
+  .text {
+    font-size: 2.5rem;
+    width: 90%;
+    margin-top: 30px;
+  }
+
+  .btn-projects{
+    font-size: 30px;
+    width: 30vw;
+    height: 10vw;
+  }
+
+  #About-section{
+    height: 100vh;
+    padding-top: 100px;
+    justify-content: flex-start;
+  }
+
+  .heading{
+    margin-bottom: 10px;
+  }
+  .heading h1{
+    padding-top: 40px;
+    font-size: 50px;
+  }
+
+  .heading p{
+    font-size: 35px;
+  }
+  .know-me-section{
+    width: 80%;
+
+  }
+  .know-me-section p {
+    font-size: xx-large;
+    
+  }
+  
+  .know-me-section h2{
+    margin-top: 50px;
+    font-size: 50px;
+  }
+
+  #hr{
+    width: 15%;
+
+  }
+  
+  .about-content{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-left: 20%;
+    gap: 30px;
+    padding: 0 ;
+    
+  }
+
+  .content-button{
+    width: 30vw;
+    height: 5vh;
+    font-size: 40px;
+    display: block;
+    margin: 30px auto 40px auto;
+  }
+
+  .skill-section h2{
+    font-size: 50px;
+  }
+  .skills{
+    font-size: 40px;
+    gap: 10px;
+  }
+
+  #code-img{
+    width: 50%;
+    height: 50%;
+    margin-top: 100px;
+  }
+
+  .display-img{
+    width: 90%;
+    height: 90%;
+  }
+  .content-list{
+    padding-left: 0;
+  }
+  .content-items{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-details{
+    padding: 0;
+    text-align: center;
+  }
+  .project-details h2{
+    font-size: 60px;
+  }
+
+  .project-details p{
+    font-size: xx-large;
+    width: 100vw;
+    padding: 0 30px 0 30px;
+  }
+  .goToProjects{
+    width: 30vw;
+    font-size: 40px;
+  }
+  #project-section{
+    padding: 50px 0 45px 0;
+
+  }
+  #contact-section{
+    height: 100vh;
+  }
+  #contact-section h2{
+    font-size: 50px;
+  }
+  .form-group label {
+    font-size: 30px;
+  }
+  .form-group input, .form-group textarea{
+    font-size: 25px;
+  }
+  .submit-btn{
+    font-size: 30px;
+  }
 }
